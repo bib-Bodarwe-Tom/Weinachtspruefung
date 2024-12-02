@@ -1,0 +1,16 @@
+DELETE FROM Spieler
+DELETE FROM Team
+DELETE FROM Trainings
+DELETE FROM Verwaltungspersonal
+
+INSERT INTO Spieler (Nachname, Vorname, Geburtsdatum,Team_ID)
+VALUES ('Bodarwé', 'Tom', 14102008, 1);
+
+INSERT INTO Team (Trainer, Spieler_ID, Team_ID)
+VALUES ('Miguel Ruiz Marin', 1, 1);
+
+INSERT INTO Trainings (Feld, Trainingszeit, Team_ID)
+VALUES ('B', 8.00/10.00, 1);
+
+INSERT INTO Verwaltungspersonal (Nachname, Vorname, Role)
+VALUES ('Bodarwé', 'Pascal', 'Präsident');
