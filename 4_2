@@ -1,0 +1,30 @@
+CREATE TABLE Spieler (
+Spieler_ID INTEGER PRIMARY KEY,
+Nachname TEXT,
+Vorname TEXT,
+Geburtsdatum DATE
+);
+
+CREATE TABLE Trainings (
+Trainings_ID INTEGER PRIMARY KEY,
+Feld TEXT,
+trainingszeit DATE,
+Team_ID INTEGER
+);
+
+CREATE TABLE Team (
+Team_ID INTEGER PRIMARY KEY,
+Trainer TEXT,
+Spieler_ID INTEGER,
+Trainings_ID INTEGER,
+FOREIGN KEY (Spieler_ID) REFERENCE Spieler(Spieler_ID),
+FOREIGN KEY (Trainings_ID) REFERENCE Trainings(Trainings_ID)
+);
+
+CREATE TABLE Verwaltungspersonal (
+Verwaltungspersonal_ID INTEGER PRIMARY KEY,
+Nachname TEXT,
+Vorname TEXT,
+Role TEXT
+);
+
