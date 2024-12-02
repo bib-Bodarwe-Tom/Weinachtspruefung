@@ -1,30 +1,28 @@
+CREATE TABLE Team (
+    Team_ID      INTEGER PRIMARY KEY,
+    Trainer      TEXT,
+    Spieler_ID   INTEGER REFERENCES Spieler (Spieler_ID),
+    Trainings_ID INTEGER REFERENCES Trainings (Trainings_ID) 
+);
+
 CREATE TABLE Spieler (
-Spieler_ID INTEGER PRIMARY KEY,
-Nachname TEXT,
-Vorname TEXT,
-Geburtsdatum DATE
+    Spieler_ID   INTEGER PRIMARY KEY,
+    Team_ID      INTEGER REFERENCES Team (Team_ID),
+    Nachname     TEXT,
+    Vorname      TEXT,
+    Geburtsdatum NUMERIC
 );
 
 CREATE TABLE Trainings (
-Trainings_ID INTEGER PRIMARY KEY,
-Feld TEXT,
-trainingszeit DATE,
-Team_ID INTEGER
-);
-
-CREATE TABLE Team (
-Team_ID INTEGER PRIMARY KEY,
-Trainer TEXT,
-Spieler_ID INTEGER,
-Trainings_ID INTEGER,
-FOREIGN KEY (Spieler_ID) REFERENCE Spieler(Spieler_ID),
-FOREIGN KEY (Trainings_ID) REFERENCE Trainings(Trainings_ID)
+    Trainings_ID  INTEGER PRIMARY KEY,
+    Feld          TEXT,
+    Trainingszeit NUMERIC,
+    Team_ID       INTEGER REFERENCES Team (Team_ID) 
 );
 
 CREATE TABLE Verwaltungspersonal (
-Verwaltungspersonal_ID INTEGER PRIMARY KEY,
-Nachname TEXT,
-Vorname TEXT,
-Role TEXT
+    [Verwaltungspersonal-ID] INTEGER PRIMARY KEY,
+    Vorname                  TEXT,
+    Nachname                 TEXT,
+    Role                     TEXT
 );
-
