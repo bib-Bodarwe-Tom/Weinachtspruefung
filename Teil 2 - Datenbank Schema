@@ -1,0 +1,5 @@
+2_1
+Dieser Datenbank wird von eine Radiosender benutzt. (Bsp. RTBF, BRF,...)
+Man erkennt das mit der Tabelle 'media_types' oder 'playlist' für die Musik, die den Radio während den Tag laufen lässt.
+Es handelt sich auch um eine Unternahmen, da eine Tabelle 'employers' erfunden worde.
+Die Datenbank enthält auch eine Tabelle 'costumer' für die Kunde, d. h. die Unternehmen, die den Musik liefern.
