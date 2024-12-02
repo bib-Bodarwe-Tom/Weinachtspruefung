@@ -1,0 +1,2 @@
+Select CONCAT(LastName, ' ', FirstName) As full_name From employees where EmployeeId = '2'
+--Hier entsteht Edwards Nancy

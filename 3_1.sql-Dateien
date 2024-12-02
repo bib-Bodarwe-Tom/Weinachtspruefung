@@ -1,0 +1,2 @@
+SELECT * FROM tracks where Composer IS NULL
+-- Hier entstehen 978 Linien.

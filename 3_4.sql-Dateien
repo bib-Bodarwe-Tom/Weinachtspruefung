@@ -1,0 +1,7 @@
+--select SUM(Milliseconds) from tracks where AlbumId = 148
+select ArtistId from artists where Name = 'Metallica'; --50
+select AlbumId from albums where ArtistId = 50;
+select SUM(Milliseconds) / 60000 from tracks where AlbumId IN (35, 148,149, 150, 151, 152, 153, 154, 155, 156);
+select SUM(Milliseconds) / 60000 from tracks where Albumid = 148
+
+-- Die einzelnen Alben der band 'Metallica' dauern 648 Minuten, Black Album dauert 62 Minuten.

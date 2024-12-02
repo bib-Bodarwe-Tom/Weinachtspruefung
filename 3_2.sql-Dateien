@@ -1,0 +1,3 @@
+SELECT * FROM albums WHERE Title = 'International Superhits';
+SELECT Name FROM tracks WHERE AlbumId = 39
+-- Hier entstehen 21 Linien.

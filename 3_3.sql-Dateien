@@ -1,0 +1,2 @@
+select COUNT(*) from tracks where Composer = 'Queen'
+--Hier entstehen 9 Tracks der Band Queen
